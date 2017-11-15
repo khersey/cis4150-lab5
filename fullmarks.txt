@@ -1,0 +1,16 @@
+"Very Studious Student"
+0123456
+
+term F16
+course CIS1234	A+
+course CIS1324	100
+course MAT1234	A+
+course MAT2340 A
+
+term W17
+course CIS2000 87
+course CIS2222 89
+course CIS2345 A
+course CIS2010 A
+course SOC2010 88
+
