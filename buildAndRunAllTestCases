@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -x
+
+make
+
+javac \
+	-cp GPAcalculator/*.class:junit-4.10.jar:GPAdb/*.class:TextTokenizer/*.class:TranscriptReader.class:.  \
+			RunAllTests.java TestCases.java 
+
+java -cp GPAcalculator/*.class:junit-4.10.jar:GPAdb/*.class:TextTokenizer/*.class:TranscriptReader.class:.  RunAllTests
+
+

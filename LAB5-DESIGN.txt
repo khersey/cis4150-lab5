@@ -1,0 +1,90 @@
+CIS*4150 Lab 5 
+
+Group 26: Kyle Hersey, Brandon Gordon
+
+
+Task 1 - Understanding
+In the context of modular integration, we have decided that a module is simply a class. 
+
+
+
+
+Task 2 - Linkages
+1. There is a message from GPAcalculator.java:100 to GPAconverter.java:23
+2. There is a message from GPAcalculator.java:132 to GPAconverter.java:49
+3. There is a message from GPAcalculator.java:137 to GPAconverter.java:49
+4. There is a message from GPAcalculator.java:37 to GPAcalculator.java:21
+5. There is a message from GPAcalculator.java:40 to GPAcalculator.java:18
+6. There is a message from GPAconverter.java:112 to GPAconverter.java:150
+7. There is a message from GPAconverter.java:114 to GPAconverter.java:150
+8. There is a message from GPAconverter.java:116 to GPAconverter.java:150
+9. There is a message from GPAconverter.java: ... to GPAconverter.java:150
+10. There is a message from GPAconverter.java:136 to GPAconverter.java:150
+11. There is a message from Database.java:33 to GPAcalculator.java:34
+12. There is a message from Database.java:163 to GPAcalculator.java:110
+13. There is a message from Database.java:171 to GPAcalculator.java:148
+14. There is a message from Database.java:182 to GPAcalculator.java:53
+15. There is a message from Database.java:69 to TermInfo.java:16
+16. There is a message from Database.java:96 to TermInfo.java:17
+17. There is a message from Database.java:111 to TermInfo.java:17
+18. There is a message from Database.java:129 to TermInfo.java:17
+19. There is a message from Database.java:150 to TermInfo.java:17
+20. There is a message from TranscriptReader.java:45 to Parser.java:28
+21. There is a message from TranscriptReader.java:54 to Parser.java:49
+22. There is a message from TranscriptReader.java:57 to Database.java:42,50
+23. There is a message from TranscriptReader.java:59 to Database.java:58
+24. There is a message from TranscriptReader.java:60 to Database.java:58
+25. There is a message from TranscriptReader.java:61 to Database.java:69
+26. There is a message from TranscriptReader.java:62 to Database.java:80
+27. There is a message from TranscriptReader.java:63 to Database.java:125
+28. There is a message from TranscriptReader.java:65 to Database.java:95
+29. There is a message from TranscriptReader.java:66 to Database.java:110
+30. There is a message from TranscriptReader.java:67 to Database.java:198
+31. There is a message from TranscriptReader.java:70 to Database.java:95
+32. There is a message from TranscriptReader.java:71 to Database.java:100
+33. There is a message from TranscriptReader.java:74 to Database.java:161
+34. There is a message from TranscriptReader.java:77 to Database.java:169
+35. There is a message from Parser.java:30 to WordExtractor.java:25
+36. There is a message from Parser.java:40 to WordExtractor.java:39
+37. There is a message from Parser.java:60 to Database.java:25
+38. There is a message from Parser.java:63 to Database.java:179
+39. There is a message from Parser.java:66 to WordExtractor.java:92
+40. There is a message from Parser.java:69 to WordExtractor.java:87
+41. There is a message from Parser.java:89 to WordExtractor.java:92
+42. There is a message from Parser.java:96 to WordExtractor.java:97
+43. There is a message from Parser.java:102 to Database.java:20
+44. There is a message from Parser.java:103 to Database.java:20
+45. There is a message from Parser.java:109 to Database.java:20
+46. There is a message from Parser.java:110 to TermInfo.java:18
+47. There is a message from Parser.java:114 to TermInfo.java:17
+48. There is a message from Parser.java:141 to WordExtractor.java:97
+49. There is a message from Parser.java:149 to WordExtractor.java:97
+50. There is a message from Parser.java:169 to WordExtractor.java:97
+ 
+
+
+Task 3 - Test Cases
+Database.java:164 to GPAcalculator.java:110
+
+
+We are using robust worst case testing with equivalence classes to perform unit tests on this linkage.
+We will be generating fake data for 5 terms:
+        Our equivalence classes will therefore be:
+        Valid terms: 1-5
+        Invalid terms: 6-32
+        Over the max allowed terms: 33+
+        Under the minimum: 0 or any negative value
+Test cases:
+Database.getTermGPA(-100)
+        Database.getTermGPA(-1)
+Database.getTermGPA(0)
+Database.getTermGPA(1)
+Database.getTermGPA(2)
+Database.getTermGPA(4)
+Database.getTermGPA(5)
+Database.getTermGPA(6)
+Database.getTermGPA(7)
+Database.getTermGPA(31)
+Database.getTermGPA(32)
+Database.getTermGPA(33)
+Database.getTermGPA(100)
